@@ -1,6 +1,7 @@
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import allQuestions from '../data_component/data.json'
+import { supabase } from '../lib/supabaseClient.js'
 
 const DIFFICULTIES = [
     { name: 'Easy', tone: 'easy', description: 'The basics every football fan knows.' },
@@ -9,14 +10,18 @@ const DIFFICULTIES = [
     { name: 'Professional', tone: 'professional', description: 'Deep cuts for the devoted.' },
 ]
 
-const LEADERBOARD_KEY = 'touchline-trivia-leaderboards'
+async function fetchLeaderboard(difficulty) {
+    const { data, error } = await supabase
+        .from('scores')
+        .select('id, name, difficulty, score, total, created_at')
+        .eq('difficulty', difficulty)
+        .order('score', { ascending: false })
+        .order('total', { ascending: false })
+        .order('created_at', { ascending: true })
+        .limit(10)
 
-function readLeaderboards() {
-    try {
-        return JSON.parse(window.localStorage.getItem(LEADERBOARD_KEY) || '{}')
-    } catch {
-        return {}
-    }
+    if (error) throw error
+    return data || []
 }
 
 function ArrowIcon() {
@@ -27,11 +32,11 @@ function ArrowIcon() {
     )
 }
 
-function LeaderboardTable({ entries }) {
+function LeaderboardTable({ entries, loading = false, error = '' }) {
     return (
         <div className="leaderboard-table" aria-live="polite">
-            {entries.length ? entries.map((entry, index) => (
-                <div className="leaderboard-row" key={`${entry.name}-${entry.date}-${index}`}>
+            {error ? <p className="leaderboard-empty">{error}</p> : loading ? <p className="leaderboard-empty">Loading scores…</p> : entries.length ? entries.map((entry, index) => (
+                <div className="leaderboard-row" key={entry.id ?? `${entry.name}-${entry.created_at}-${index}`}>
                     <span className="leaderboard-rank">{String(index + 1).padStart(2, '0')}</span>
                     <strong>{entry.name}</strong>
                     <span>{entry.score}<i> / {entry.total}</i></span>
@@ -50,8 +55,34 @@ function Home() {
     const [isFinished, setIsFinished] = useState(false)
     const [playerName, setPlayerName] = useState('')
     const [hasSubmittedScore, setHasSubmittedScore] = useState(false)
-    const [leaderboards, setLeaderboards] = useState(readLeaderboards)
+    const [leaderboards, setLeaderboards] = useState({})
     const [leaderboardDifficulty, setLeaderboardDifficulty] = useState('EASY')
+    const [leaderboardLoading, setLeaderboardLoading] = useState(true)
+    const [leaderboardError, setLeaderboardError] = useState('')
+    const [isSavingScore, setIsSavingScore] = useState(false)
+    const [scoreError, setScoreError] = useState('')
+
+    useEffect(() => {
+        let isCurrent = true
+
+        Promise.all(DIFFICULTIES.map(async ({ name }) => {
+            const difficulty = name.toUpperCase()
+            return [difficulty, await fetchLeaderboard(difficulty)]
+        }))
+            .then((results) => {
+                if (isCurrent) setLeaderboards(Object.fromEntries(results))
+            })
+            .catch((error) => {
+                if (isCurrent) setLeaderboardError(`Could not load scores: ${error.message}`)
+            })
+            .finally(() => {
+                if (isCurrent) setLeaderboardLoading(false)
+            })
+
+        return () => {
+            isCurrent = false
+        }
+    }, [])
 
     const questions = allQuestions.filter((question) => question.difficulty === activeDifficulty)
     const currentQuestion = questions[questionIndex]
@@ -82,22 +113,38 @@ function Home() {
         setSelectedAnswer(null)
     }
 
-    const submitScore = (event) => {
+    const submitScore = async (event) => {
         event.preventDefault()
         const name = playerName.trim().slice(0, 18)
-        if (!name || hasSubmittedScore) return
+        if (!name || hasSubmittedScore || isSavingScore) return
 
-        const nextLeaderboards = {
-            ...leaderboards,
-            [activeDifficulty]: [
-                ...(leaderboards[activeDifficulty] || []),
-                { name, score, total: questions.length, date: new Date().toISOString() },
-            ].sort((first, second) => second.score - first.score || second.total - first.total).slice(0, 10),
+        setIsSavingScore(true)
+        setScoreError('')
+        setLeaderboardError('')
+        let scoreInserted = false
+        try {
+            const { error } = await supabase.from('scores').insert({
+                name,
+                difficulty: activeDifficulty,
+                score,
+                total: questions.length,
+            })
+            if (error) throw error
+
+            scoreInserted = true
+            setHasSubmittedScore(true)
+            setLeaderboardDifficulty(activeDifficulty)
+            const entries = await fetchLeaderboard(activeDifficulty)
+            setLeaderboards((current) => ({ ...current, [activeDifficulty]: entries }))
+        } catch (error) {
+            if (scoreInserted) {
+                setLeaderboardError(`Your score was saved, but the leaderboard could not refresh: ${error.message}`)
+            } else {
+                setScoreError(`Could not save your score: ${error.message}`)
+            }
+        } finally {
+            setIsSavingScore(false)
         }
-        window.localStorage.setItem(LEADERBOARD_KEY, JSON.stringify(nextLeaderboards))
-        setLeaderboards(nextLeaderboards)
-        setLeaderboardDifficulty(activeDifficulty)
-        setHasSubmittedScore(true)
     }
 
     const selectedLeaderboard = leaderboards[leaderboardDifficulty] || []
@@ -111,6 +158,7 @@ function Home() {
                 </a>
                 <nav className="main-nav" aria-label="Main navigation">
                     <a href="#categories">The quiz</a>
+                    <a href="#leaderboards">Leaderboard</a>
                     <a href="#how-to-play">How to play</a>
                 </nav>
                 <a className="nav-cta" href="#difficulty">Choose a level <ArrowIcon /></a>
@@ -134,11 +182,12 @@ function Home() {
                                     <label htmlFor="player-name">Add your name to the {activeDifficulty.toLowerCase()} leaderboard</label>
                                     <div className="score-entry-controls">
                                         <input id="player-name" value={playerName} onChange={(event) => setPlayerName(event.target.value)} maxLength="18" placeholder="Your name" required />
-                                        <button className="button button-primary" type="submit">Save score <ArrowIcon /></button>
+                                        <button className="button button-primary" type="submit" disabled={isSavingScore}>{isSavingScore ? 'Saving…' : 'Save score'} <ArrowIcon /></button>
                                     </div>
                                 </form>
                             ) : <p className="saved-note">✓ Your score has been added to the {activeDifficulty.toLowerCase()} leaderboard.</p>}
-                            <LeaderboardTable entries={leaderboards[activeDifficulty] || []} />
+                            {scoreError && <p className="leaderboard-empty" role="alert">{scoreError}</p>}
+                            <LeaderboardTable entries={leaderboards[activeDifficulty] || []} loading={leaderboardLoading || isSavingScore} error={leaderboardError} />
                             <div className="result-actions">
                                 <button className="button button-primary" onClick={() => startQuiz(activeDifficulty)}>Play again <ArrowIcon /></button>
                                 <button className="text-button" onClick={() => setIsPlaying(false)}>Back to home</button>
@@ -246,7 +295,7 @@ function Home() {
                                 })}
                             </div>
                             <div className="leaderboard-heading"><span>RANK</span><span>PLAYER</span><span>SCORE</span></div>
-                            <LeaderboardTable entries={selectedLeaderboard} />
+                            <LeaderboardTable entries={selectedLeaderboard} loading={leaderboardLoading} error={leaderboardError} />
                         </div>
                     </section>
 
