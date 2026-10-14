@@ -1,0 +1,182 @@
+[
+	{
+		"id": 1,
+		"category": "WORLD CUP",
+		"difficulty": "EASY",
+		"question": "Which country won the first-ever FIFA World Cup in 1930?",
+		"options": ["Brazil", "Uruguay", "Italy", "Argentina"],
+		"answer": "Uruguay",
+		"explanation": "Uruguay hosted the inaugural tournament and beat Argentina 4–2 in the final."
+	},
+	{
+		"id": 2,
+		"category": "THE PLAYERS",
+		"difficulty": "EASY",
+		"question": "Which player is famously known as 'The Egyptian King'?",
+		"options": ["Riyad Mahrez", "Mohamed Salah", "Sadio Mané", "Didier Drogba"],
+		"answer": "Mohamed Salah",
+		"explanation": "Liverpool forward Mohamed Salah is widely known by that nickname."
+	},
+	{
+		"id": 3,
+		"category": "PREMIER LEAGUE",
+		"difficulty": "MEDIUM",
+		"question": "Which club completed the Premier League season unbeaten in 2003–04?",
+		"options": ["Chelsea", "Manchester United", "Arsenal", "Liverpool"],
+		"answer": "Arsenal",
+		"explanation": "Arsenal's 'Invincibles' went through the 38-game league season without a defeat."
+	},
+	{
+		"id": 4,
+		"category": "WORLD CUP",
+		"difficulty": "MEDIUM",
+		"question": "Which nation did Diego Maradona score his 'Hand of God' goal against?",
+		"options": ["West Germany", "England", "Belgium", "Italy"],
+		"answer": "England",
+		"explanation": "Maradona scored the controversial goal against England in the 1986 quarter-final."
+	},
+	{
+		"id": 5,
+		"category": "THE PLAYERS",
+		"difficulty": "MEDIUM",
+		"question": "Who is the only goalkeeper to have won the Ballon d'Or?",
+		"options": ["Gianluigi Buffon", "Manuel Neuer", "Lev Yashin", "Iker Casillas"],
+		"answer": "Lev Yashin",
+		"explanation": "Soviet goalkeeper Lev Yashin won the Ballon d'Or in 1963."
+	},
+	{
+		"id": 6,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "MEDIUM",
+		"question": "Which club did Liverpool beat in the 2005 UEFA Champions League final?",
+		"options": ["AC Milan", "Juventus", "Real Madrid", "Barcelona"],
+		"answer": "AC Milan",
+		"explanation": "Liverpool came back from 3–0 down to draw 3–3, then won the penalty shootout."
+	},
+	{
+		"id": 7,
+		"category": "THE RULES",
+		"difficulty": "EASY",
+		"question": "How many players does one team have on the pitch at the start of a standard match?",
+		"options": ["10", "11", "12", "9"],
+		"answer": "11",
+		"explanation": "A team starts with eleven players, including the goalkeeper."
+	},
+	{
+		"id": 8,
+		"category": "WORLD CUP",
+		"difficulty": "MEDIUM",
+		"question": "Which country hosted the 2010 FIFA World Cup?",
+		"options": ["Brazil", "Germany", "South Africa", "Mexico"],
+		"answer": "South Africa",
+		"explanation": "South Africa became the first African nation to host the men's FIFA World Cup."
+	},
+	{
+		"id": 9,
+		"category": "THE PLAYERS",
+		"difficulty": "HARD",
+		"question": "Which nation did Eusébio represent at the 1966 World Cup?",
+		"options": ["Brazil", "Portugal", "Mozambique", "Spain"],
+		"answer": "Portugal",
+		"explanation": "Born in Mozambique, Eusébio played internationally for Portugal and finished as the 1966 tournament's top scorer."
+	},
+	{
+		"id": 10,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "HARD",
+		"question": "Which club won the first edition of the European Cup in 1956?",
+		"options": ["Benfica", "Real Madrid", "Reims", "Barcelona"],
+		"answer": "Real Madrid",
+		"explanation": "Real Madrid won the inaugural European Cup, beating Reims 4–3 in the final."
+	},
+	{
+		"id": 11,
+		"category": "THE RULES",
+		"difficulty": "EASY",
+		"question": "How long is a standard football match, excluding stoppage time and extra time?",
+		"options": ["80 minutes", "90 minutes", "100 minutes", "Two 45-minute halves"],
+		"answer": "90 minutes",
+		"explanation": "A standard match has two 45-minute halves."
+	},
+	{
+		"id": 12,
+		"category": "THE RULES",
+		"difficulty": "EASY",
+		"question": "What restart is awarded when the whole ball crosses the goal line last touched by a defender, but no goal is scored?",
+		"options": ["Goal kick", "Corner kick", "Throw-in", "Indirect free kick"],
+		"answer": "Corner kick",
+		"explanation": "If a defender last touches the ball before it crosses their own goal line, the attacking team takes a corner."
+	},
+	{
+		"id": 13,
+		"category": "WORLD CUP",
+		"difficulty": "HARD",
+		"question": "Which African nation became the first to reach a men's FIFA World Cup quarter-final?",
+		"options": ["Nigeria", "Senegal", "Cameroon", "Morocco"],
+		"answer": "Cameroon",
+		"explanation": "Cameroon reached the quarter-finals at Italia '90, the first African team to do so."
+	},
+	{
+		"id": 14,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "HARD",
+		"question": "Who scored the opening goal for Porto in the 2004 UEFA Champions League final?",
+		"options": ["Deco", "Carlos Alberto", "Benni McCarthy", "Maniche"],
+		"answer": "Carlos Alberto",
+		"explanation": "Carlos Alberto opened the scoring in Porto's 3–0 victory over Monaco."
+	},
+	{
+		"id": 15,
+		"category": "THE PLAYERS",
+		"difficulty": "HARD",
+		"question": "Which goalkeeper started for Italy in the 2006 FIFA World Cup final?",
+		"options": ["Angelo Peruzzi", "Gianluigi Buffon", "Francesco Toldo", "Dino Zoff"],
+		"answer": "Gianluigi Buffon",
+		"explanation": "Buffon was Italy's first-choice goalkeeper throughout their 2006 World Cup-winning campaign."
+	},
+	{
+		"id": 16,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "PROFESSIONAL",
+		"question": "Which club did Nottingham Forest defeat in the 1979 European Cup final?",
+		"options": ["Hamburg", "Malmö FF", "Borussia Mönchengladbach", "Ajax"],
+		"answer": "Malmö FF",
+		"explanation": "Trevor Francis scored the only goal as Forest beat Malmö FF 1–0 in Munich."
+	},
+	{
+		"id": 17,
+		"category": "WORLD CUP",
+		"difficulty": "PROFESSIONAL",
+		"question": "Which two players shared the Golden Boot at the 1994 FIFA World Cup?",
+		"options": ["Romário and Roberto Baggio", "Hristo Stoichkov and Oleg Salenko", "Bebeto and Jürgen Klinsmann", "Gabriel Batistuta and Kennet Andersson"],
+		"answer": "Hristo Stoichkov and Oleg Salenko",
+		"explanation": "Both Stoichkov and Salenko scored six goals at USA '94."
+	},
+	{
+		"id": 18,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "PROFESSIONAL",
+		"question": "How did the 1986 European Cup final between Steaua București and Barcelona finish?",
+		"options": ["Steaua won 2–0", "Barcelona won 1–0", "It ended 0–0; Steaua won on penalties", "It ended 1–1; Steaua won on penalties"],
+		"answer": "It ended 0–0; Steaua won on penalties",
+		"explanation": "Goalkeeper Helmuth Duckadam saved all four Barcelona penalties as Steaua won the shootout 2–0."
+	},
+	{
+		"id": 19,
+		"category": "THE PLAYERS",
+		"difficulty": "PROFESSIONAL",
+		"question": "Which player scored the fastest hat-trick in Premier League history?",
+		"options": ["Robbie Fowler", "Sadio Mané", "Sergio Agüero", "Jermain Defoe"],
+		"answer": "Sadio Mané",
+		"explanation": "Mané scored three times in 2 minutes and 56 seconds for Southampton against Aston Villa in 2015."
+	},
+	{
+		"id": 20,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "PROFESSIONAL",
+		"question": "Which club did Ajax defeat in the 1995 UEFA Champions League final?",
+		"options": ["AC Milan", "Juventus", "Bayern Munich", "Real Madrid"],
+		"answer": "AC Milan",
+		"explanation": "Ajax beat defending champions AC Milan 1–0, with Patrick Kluivert scoring the late winner."
+	}
+]

@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+	font-family: 'DM Sans', sans-serif;
+	color: #f5f4ed;
+	background: #10120f;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-size: 16px;
+	font-smooth: never;
+	--color-bg: #10120f;
+	--color-paper: #f5f4ed;
+	--color-lime: #c7f36b;
+	--color-muted: #9a9d94;
+	--font-display: 'Barlow Condensed', Impact, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { min-width: 320px; scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, a { font: inherit; }
+button { color: inherit; }
+a { color: inherit; text-decoration: none; }
+button:focus-visible, a:focus-visible { outline: 2px solid var(--color-lime); outline-offset: 4px; }
+::selection { color: var(--color-bg); background: var(--color-lime); }
