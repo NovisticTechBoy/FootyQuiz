@@ -10,6 +10,16 @@ const DIFFICULTIES = [
     { name: 'Professional', tone: 'professional', description: 'Deep cuts for the devoted.' },
 ]
 
+const COMPLETED_DIFFICULTIES_KEY = 'touchline-trivia-completed-difficulties'
+
+function readCompletedDifficulties() {
+    try {
+        return JSON.parse(window.localStorage.getItem(COMPLETED_DIFFICULTIES_KEY) || '[]')
+    } catch {
+        return []
+    }
+}
+
 async function fetchLeaderboard(difficulty) {
     const { data, error } = await supabase
         .from('scores')
@@ -61,6 +71,7 @@ function Home() {
     const [leaderboardError, setLeaderboardError] = useState('')
     const [isSavingScore, setIsSavingScore] = useState(false)
     const [scoreError, setScoreError] = useState('')
+    const [completedDifficulties, setCompletedDifficulties] = useState(readCompletedDifficulties)
 
     useEffect(() => {
         let isCurrent = true
@@ -89,6 +100,7 @@ function Home() {
     const progress = questions.length ? ((questionIndex + (selectedAnswer === null ? 0 : 1)) / questions.length) * 100 : 0
 
     const startQuiz = (difficulty) => {
+        if (completedDifficulties.includes(difficulty)) return
         setActiveDifficulty(difficulty)
         setQuestionIndex(0)
         setSelectedAnswer(null)
@@ -133,6 +145,13 @@ function Home() {
 
             scoreInserted = true
             setHasSubmittedScore(true)
+            const updatedCompletedDifficulties = [...new Set([...completedDifficulties, activeDifficulty])]
+            setCompletedDifficulties(updatedCompletedDifficulties)
+            try {
+                window.localStorage.setItem(COMPLETED_DIFFICULTIES_KEY, JSON.stringify(updatedCompletedDifficulties))
+            } catch {
+                // The saved score still prevents replay for this session if storage is unavailable.
+            }
             setLeaderboardDifficulty(activeDifficulty)
             const entries = await fetchLeaderboard(activeDifficulty)
             setLeaderboards((current) => ({ ...current, [activeDifficulty]: entries }))
@@ -189,7 +208,7 @@ function Home() {
                             {scoreError && <p className="leaderboard-empty" role="alert">{scoreError}</p>}
                             <LeaderboardTable entries={leaderboards[activeDifficulty] || []} loading={leaderboardLoading || isSavingScore} error={leaderboardError} />
                             <div className="result-actions">
-                                <button className="button button-primary" onClick={() => startQuiz(activeDifficulty)}>Play again <ArrowIcon /></button>
+                                <button className="button button-primary" onClick={() => setIsPlaying(false)}>Choose another level <ArrowIcon /></button>
                                 <button className="text-button" onClick={() => setIsPlaying(false)}>Back to home</button>
                             </div>
                         </div>
@@ -237,7 +256,7 @@ function Home() {
                             <p className="hero-description">Big moments. Cult heroes. The details only real fans remember. Step up to the spot and prove you know your football.</p>
                             <div className="hero-actions">
                                 <a className="button button-primary" href="#difficulty">Choose your level <ArrowIcon /></a>
-                                <span className="time-note"><span>◷</span> 6 questions · about 2 minutes</span>
+                                <span className="time-note"><span>◷</span> 10 questions · about 3 minutes</span>
                             </div>
                             <div className="hero-proof">
                                 <div className="avatar-stack" aria-hidden="true"><span>⚽</span><span>🏆</span><span>⚡</span></div>
@@ -259,17 +278,19 @@ function Home() {
                     <section className="ticker" aria-label="Quiz topics"><div className="ticker-track"><span>THE PREMIER LEAGUE</span><i>✳</i><span>WORLD CUP HISTORY</span><i>✳</i><span>LEGENDARY PLAYERS</span><i>✳</i><span>ICONIC MOMENTS</span><i>✳</i><span>THE PREMIER LEAGUE</span><i>✳</i><span>WORLD CUP HISTORY</span><i>✳</i></div></section>
 
                     <section className="difficulty-section" id="difficulty">
-                        <div className="section-intro"><div><span className="eyebrow">PICK YOUR CHALLENGE</span><h2>Four levels.<br /><span>One beautiful game.</span></h2></div><p>Each round has six questions. Your score joins that level’s leaderboard.</p></div>
+                        <div className="section-intro"><div><span className="eyebrow">PICK YOUR CHALLENGE</span><h2>Four levels.<br /><span>One beautiful game.</span></h2></div><p>Each round has ten questions. You get one scored attempt per level; your name can compete across all four.</p></div>
                         <div className="difficulty-grid">
                             {DIFFICULTIES.map((difficulty, index) => {
                                 const count = allQuestions.filter((question) => question.difficulty === difficulty.name.toUpperCase()).length
+                                const level = difficulty.name.toUpperCase()
+                                const isCompleted = completedDifficulties.includes(level)
                                 return (
-                                    <button className={`difficulty-card difficulty-${difficulty.tone}`} key={difficulty.name} onClick={() => startQuiz(difficulty.name.toUpperCase())}>
+                                    <button className={`difficulty-card difficulty-${difficulty.tone}${isCompleted ? ' difficulty-completed' : ''}`} key={difficulty.name} onClick={() => startQuiz(level)} disabled={isCompleted}>
                                         <span className="difficulty-index">0{index + 1} / {String(count).padStart(2, '0')} QUESTIONS</span>
                                         <span className="difficulty-icon">{['◉', '◒', '◈', '✳'][index]}</span>
                                         <strong>{difficulty.name}</strong>
                                         <span className="difficulty-description">{difficulty.description}</span>
-                                        <span className="difficulty-cta">Start challenge <ArrowIcon /></span>
+                                        <span className="difficulty-cta">{isCompleted ? 'Attempt completed' : 'Start challenge'} {!isCompleted && <ArrowIcon />}</span>
                                     </button>
                                 )
                             })}
@@ -286,7 +307,7 @@ function Home() {
                     </section>
 
                     <section className="leaderboard-section" id="leaderboards">
-                        <div className="section-intro"><div><span className="eyebrow">THE TABLE</span><h2>Every level.<br /><span>Its own legends.</span></h2></div><p>Scores are saved in this browser, ready for your next matchday.</p></div>
+                        <div className="section-intro"><div><span className="eyebrow">THE TABLE</span><h2>Every level.<br /><span>Its own legends.</span></h2></div><p>Scores are shared on each level’s leaderboard. You can enter all four levels once.</p></div>
                         <div className="leaderboard-panel">
                             <div className="leaderboard-tabs" role="tablist" aria-label="Leaderboard difficulty">
                                 {DIFFICULTIES.map((difficulty) => {
@@ -301,7 +322,7 @@ function Home() {
 
                     <section className="how-section" id="how-to-play">
                         <div><span className="eyebrow">SIMPLE AS THAT</span><h2>Three steps.<br /><span>One winner.</span></h2></div>
-                        <div className="steps-list"><div className="step"><span>01</span><p><strong>Pick your level.</strong> Choose Easy, Medium, Hard, or Professional.</p></div><div className="step"><span>02</span><p><strong>Trust your football brain.</strong> Answer six hand-picked questions. No lifelines, no VAR.</p></div><div className="step"><span>03</span><p><strong>Claim your place.</strong> Save your score and see how you rank in that level.</p></div></div>
+                        <div className="steps-list"><div className="step"><span>01</span><p><strong>Pick your level.</strong> Choose Easy, Medium, Hard, or Professional.</p></div><div className="step"><span>02</span><p><strong>Trust your football brain.</strong> Answer ten hand-picked questions. No lifelines, no VAR.</p></div><div className="step"><span>03</span><p><strong>Claim your place.</strong> Save one score per level and see how you rank. Play other levels with the same name.</p></div></div>
                     </section>
                     <footer className="footer"><a className="brand" href="#home"><span className="brand-mark">T<span>.</span></span><span className="brand-name">TOUCHLINE<span>TRIVIA</span></span></a><p>Made for the love of the game. <span>© 2026 TOUCHLINE TRIVIA</span></p><button className="back-top" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>BACK TO TOP ↑</button></footer>
                 </>

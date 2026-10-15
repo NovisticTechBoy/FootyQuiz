@@ -214,5 +214,149 @@
 		"options": ["Robert Lewandowski", "Mohamed Salah", "Zlatan Ibrahimovic", "Didier Drogba"],
 		"answer": "Zlatan Ibrahimovic",
 		"explanation": "Zlatan Ibrahimovic never won the Champions League during his playing career."
+	},
+	{
+		"id": 25,
+		"category": "THE RULES",
+		"difficulty": "EASY",
+		"question": "How many points does a team receive for a league win?",
+		"options": ["One", "Two", "Three", "Four"],
+		"answer": "Three",
+		"explanation": "Under the standard league system, a win is worth three points."
+	},
+	{
+		"id": 26,
+		"category": "WORLD CUP",
+		"difficulty": "EASY",
+		"question": "Which country won the 2022 FIFA World Cup?",
+		"options": ["France", "Argentina", "Croatia", "Brazil"],
+		"answer": "Argentina",
+		"explanation": "Argentina beat France on penalties after a 3–3 final in Qatar."
+	},
+	{
+		"id": 27,
+		"category": "THE RULES",
+		"difficulty": "EASY",
+		"question": "What does a red card mean for the player who receives it?",
+		"options": ["A warning", "A substitution", "They are sent off", "A five-minute suspension"],
+		"answer": "They are sent off",
+		"explanation": "A player shown a red card must leave the field and cannot be replaced."
+	},
+	{
+		"id": 28,
+		"category": "THE PLAYERS",
+		"difficulty": "EASY",
+		"question": "Which position is usually the only one allowed to handle the ball during open play in their own penalty area?",
+		"options": ["Centre-back", "Goalkeeper", "Defensive midfielder", "Striker"],
+		"answer": "Goalkeeper",
+		"explanation": "The goalkeeper may handle the ball inside their own penalty area, subject to the Laws of the Game."
+	},
+	{
+		"id": 29,
+		"category": "WORLD CUP",
+		"difficulty": "MEDIUM",
+		"question": "Which country won the 2006 FIFA World Cup?",
+		"options": ["France", "Italy", "Germany", "Brazil"],
+		"answer": "Italy",
+		"explanation": "Italy defeated France on penalties in the final in Berlin."
+	},
+	{
+		"id": 30,
+		"category": "PREMIER LEAGUE",
+		"difficulty": "MEDIUM",
+		"question": "Who won the first Premier League season, in 1992–93?",
+		"options": ["Blackburn Rovers", "Arsenal", "Manchester United", "Aston Villa"],
+		"answer": "Manchester United",
+		"explanation": "Manchester United finished top of the inaugural Premier League season."
+	},
+	{
+		"id": 31,
+		"category": "WORLD CUP",
+		"difficulty": "MEDIUM",
+		"question": "Who scored the winning goal in the 2010 FIFA World Cup final?",
+		"options": ["David Villa", "Andrés Iniesta", "Fernando Torres", "Xavi"],
+		"answer": "Andrés Iniesta",
+		"explanation": "Iniesta scored in extra time to give Spain a 1–0 win over the Netherlands."
+	},
+	{
+		"id": 32,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "MEDIUM",
+		"question": "Which country won UEFA Euro 2020, played in 2021?",
+		"options": ["England", "Italy", "Spain", "Portugal"],
+		"answer": "Italy",
+		"explanation": "Italy beat England on penalties in the final at Wembley."
+	},
+	{
+		"id": 33,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "HARD",
+		"question": "Which club became the first English side to win the European Cup?",
+		"options": ["Liverpool", "Manchester United", "Nottingham Forest", "Celtic"],
+		"answer": "Manchester United",
+		"explanation": "Manchester United won the European Cup in 1968, beating Benfica at Wembley."
+	},
+	{
+		"id": 34,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "HARD",
+		"question": "Which country won UEFA Euro 1992 after entering the tournament as a late replacement?",
+		"options": ["Sweden", "Denmark", "Netherlands", "Germany"],
+		"answer": "Denmark",
+		"explanation": "Denmark replaced Yugoslavia shortly before the tournament and went on to win the final."
+	},
+	{
+		"id": 35,
+		"category": "WORLD CUP",
+		"difficulty": "HARD",
+		"question": "Which country did Brazil defeat in the 2002 FIFA World Cup final?",
+		"options": ["Turkey", "Germany", "England", "South Korea"],
+		"answer": "Germany",
+		"explanation": "Brazil beat Germany 2–0 in Yokohama, with both goals scored by Ronaldo."
+	},
+	{
+		"id": 36,
+		"category": "WORLD CUP",
+		"difficulty": "HARD",
+		"question": "Which country hosted the 1978 FIFA World Cup?",
+		"options": ["Chile", "Mexico", "Argentina", "Spain"],
+		"answer": "Argentina",
+		"explanation": "Argentina hosted and won the 1978 tournament, defeating the Netherlands in the final."
+	},
+	{
+		"id": 37,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "PROFESSIONAL",
+		"question": "Who scored Manchester United's winning goal in the 1999 UEFA Champions League final?",
+		"options": ["David Beckham", "Teddy Sheringham", "Ole Gunnar Solskjær", "Ryan Giggs"],
+		"answer": "Ole Gunnar Solskjær",
+		"explanation": "Solskjær scored in stoppage time to complete United's comeback against Bayern Munich."
+	},
+	{
+		"id": 38,
+		"category": "WORLD CUP",
+		"difficulty": "PROFESSIONAL",
+		"question": "Which player finished as the top scorer at the 1982 FIFA World Cup?",
+		"options": ["Karl-Heinz Rummenigge", "Paolo Rossi", "Zico", "Gary Lineker"],
+		"answer": "Paolo Rossi",
+		"explanation": "Rossi scored six goals for Italy, including a hat-trick against Brazil."
+	},
+	{
+		"id": 39,
+		"category": "WORLD CUP",
+		"difficulty": "PROFESSIONAL",
+		"question": "Which country did West Germany defeat in the 1974 FIFA World Cup final?",
+		"options": ["Brazil", "Italy", "Netherlands", "Poland"],
+		"answer": "Netherlands",
+		"explanation": "West Germany came from behind to beat the Netherlands 2–1 in Munich."
+	},
+	{
+		"id": 40,
+		"category": "WORLD CUP",
+		"difficulty": "PROFESSIONAL",
+		"question": "Which country did Germany defeat in the 1990 FIFA World Cup final?",
+		"options": ["England", "Argentina", "Italy", "Netherlands"],
+		"answer": "Argentina",
+		"explanation": "Germany won 1–0 in Rome, with Andreas Brehme scoring the only goal from the penalty spot."
 	}
 ]
