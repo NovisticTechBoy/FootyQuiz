@@ -178,5 +178,41 @@
 		"options": ["AC Milan", "Juventus", "Bayern Munich", "Real Madrid"],
 		"answer": "AC Milan",
 		"explanation": "Ajax beat defending champions AC Milan 1–0, with Patrick Kluivert scoring the late winner."
+	},
+	{
+		"id": 21,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "PROFESSIONAL",
+		"question": "Which team won the 2008–09 UEFA Champions League?",
+		"options": ["AC Milan", "Barcelona", "Bayern Munich", "Real Madrid"],
+		"answer": "Barcelona",
+		"explanation": "Barcelona beat Manchester United 2–0 in the final in Rome."
+	},
+	{
+		"id": 22,
+		"category": "THE PLAYERS",
+		"difficulty": "HARD",
+		"question": "Who won the Ballon d'Or in 2000?",
+		"options": ["Lionel Messi", "Ricardo Carvalho", "Luis Figo", "Zinedine Zidane"],
+		"answer": "Luis Figo",
+		"explanation": "Luis Figo won the 2000 award, finishing ahead of Zinedine Zidane and Andriy Shevchenko. Eusébio was the first Portuguese winner, in 1965."
+	},
+	{
+		"id": 23,
+		"category": "WORLD CUP",
+		"difficulty": "MEDIUM",
+		"question": "Which country won the 2014 FIFA World Cup?",
+		"options": ["Brazil", "Germany", "South Africa", "Argentina"],
+		"answer": "Germany",
+		"explanation": "Germany beat Argentina 1–0 after extra time in the final, with Mario Götze scoring the winner."
+	},
+	{
+		"id": 24,
+		"category": "THE PLAYERS",
+		"difficulty": "EASY",
+		"question": "Which of these retired players never won the UEFA Champions League?",
+		"options": ["Robert Lewandowski", "Mohamed Salah", "Zlatan Ibrahimovic", "Didier Drogba"],
+		"answer": "Zlatan Ibrahimovic",
+		"explanation": "Zlatan Ibrahimovic never won the Champions League during his playing career."
 	}
 ]

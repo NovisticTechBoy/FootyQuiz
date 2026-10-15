@@ -237,7 +237,7 @@ function Home() {
                             <p className="hero-description">Big moments. Cult heroes. The details only real fans remember. Step up to the spot and prove you know your football.</p>
                             <div className="hero-actions">
                                 <a className="button button-primary" href="#difficulty">Choose your level <ArrowIcon /></a>
-                                <span className="time-note"><span>◷</span> 5 questions · about 2 minutes</span>
+                                <span className="time-note"><span>◷</span> 6 questions · about 2 minutes</span>
                             </div>
                             <div className="hero-proof">
                                 <div className="avatar-stack" aria-hidden="true"><span>⚽</span><span>🏆</span><span>⚡</span></div>
@@ -259,7 +259,7 @@ function Home() {
                     <section className="ticker" aria-label="Quiz topics"><div className="ticker-track"><span>THE PREMIER LEAGUE</span><i>✳</i><span>WORLD CUP HISTORY</span><i>✳</i><span>LEGENDARY PLAYERS</span><i>✳</i><span>ICONIC MOMENTS</span><i>✳</i><span>THE PREMIER LEAGUE</span><i>✳</i><span>WORLD CUP HISTORY</span><i>✳</i></div></section>
 
                     <section className="difficulty-section" id="difficulty">
-                        <div className="section-intro"><div><span className="eyebrow">PICK YOUR CHALLENGE</span><h2>Four levels.<br /><span>One beautiful game.</span></h2></div><p>Each round has five questions. Your score joins that level’s leaderboard.</p></div>
+                        <div className="section-intro"><div><span className="eyebrow">PICK YOUR CHALLENGE</span><h2>Four levels.<br /><span>One beautiful game.</span></h2></div><p>Each round has six questions. Your score joins that level’s leaderboard.</p></div>
                         <div className="difficulty-grid">
                             {DIFFICULTIES.map((difficulty, index) => {
                                 const count = allQuestions.filter((question) => question.difficulty === difficulty.name.toUpperCase()).length
@@ -301,7 +301,7 @@ function Home() {
 
                     <section className="how-section" id="how-to-play">
                         <div><span className="eyebrow">SIMPLE AS THAT</span><h2>Three steps.<br /><span>One winner.</span></h2></div>
-                        <div className="steps-list"><div className="step"><span>01</span><p><strong>Pick your level.</strong> Choose Easy, Medium, Hard, or Professional.</p></div><div className="step"><span>02</span><p><strong>Trust your football brain.</strong> Answer five hand-picked questions. No lifelines, no VAR.</p></div><div className="step"><span>03</span><p><strong>Claim your place.</strong> Save your score and see how you rank in that level.</p></div></div>
+                        <div className="steps-list"><div className="step"><span>01</span><p><strong>Pick your level.</strong> Choose Easy, Medium, Hard, or Professional.</p></div><div className="step"><span>02</span><p><strong>Trust your football brain.</strong> Answer six hand-picked questions. No lifelines, no VAR.</p></div><div className="step"><span>03</span><p><strong>Claim your place.</strong> Save your score and see how you rank in that level.</p></div></div>
                     </section>
                     <footer className="footer"><a className="brand" href="#home"><span className="brand-mark">T<span>.</span></span><span className="brand-name">TOUCHLINE<span>TRIVIA</span></span></a><p>Made for the love of the game. <span>© 2026 TOUCHLINE TRIVIA</span></p><button className="back-top" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>BACK TO TOP ↑</button></footer>
                 </>
