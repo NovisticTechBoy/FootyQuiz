@@ -3,7 +3,7 @@
 		"id": 1,
 		"category": "WORLD CUP",
 		"difficulty": "EASY",
-		"question": "Which country won the first-ever FIFA World Cup in 1930?",
+		"question": "At the inaugural FIFA World Cup final in 1930, which side beat Argentina 4–2?",
 		"options": ["Brazil", "Uruguay", "Italy", "Argentina"],
 		"answer": "Uruguay",
 		"explanation": "Uruguay hosted the inaugural tournament and beat Argentina 4–2 in the final."
@@ -12,7 +12,7 @@
 		"id": 2,
 		"category": "THE PLAYERS",
 		"difficulty": "EASY",
-		"question": "Which player is famously known as 'The Egyptian King'?",
+		"question": "Which Liverpool forward became closely associated with the nickname 'The Egyptian King'?",
 		"options": ["Riyad Mahrez", "Mohamed Salah", "Sadio Mané", "Didier Drogba"],
 		"answer": "Mohamed Salah",
 		"explanation": "Liverpool forward Mohamed Salah is widely known by that nickname."
@@ -21,7 +21,7 @@
 		"id": 3,
 		"category": "PREMIER LEAGUE",
 		"difficulty": "MEDIUM",
-		"question": "Which club completed the Premier League season unbeaten in 2003–04?",
+		"question": "An unbeaten league campaign in 2003–04 earned which Premier League club the Invincibles label?",
 		"options": ["Chelsea", "Manchester United", "Arsenal", "Liverpool"],
 		"answer": "Arsenal",
 		"explanation": "Arsenal's 'Invincibles' went through the 38-game league season without a defeat."
@@ -30,7 +30,7 @@
 		"id": 4,
 		"category": "WORLD CUP",
 		"difficulty": "MEDIUM",
-		"question": "Which nation did Diego Maradona score his 'Hand of God' goal against?",
+		"question": "In the 1986 quarter-final incident later dubbed the Hand of God, which nation was England facing?",
 		"options": ["West Germany", "England", "Belgium", "Italy"],
 		"answer": "England",
 		"explanation": "Maradona scored the controversial goal against England in the 1986 quarter-final."
@@ -39,7 +39,7 @@
 		"id": 5,
 		"category": "THE PLAYERS",
 		"difficulty": "MEDIUM",
-		"question": "Who is the only goalkeeper to have won the Ballon d'Or?",
+		"question": "A Soviet goalkeeper took football's top individual prize in 1963. Who was he?",
 		"options": ["Gianluigi Buffon", "Manuel Neuer", "Lev Yashin", "Iker Casillas"],
 		"answer": "Lev Yashin",
 		"explanation": "Soviet goalkeeper Lev Yashin won the Ballon d'Or in 1963."
@@ -48,7 +48,7 @@
 		"id": 6,
 		"category": "EUROPEAN FOOTBALL",
 		"difficulty": "MEDIUM",
-		"question": "Which club did Liverpool beat in the 2005 UEFA Champions League final?",
+		"question": "In Istanbul in 2005, Liverpool's comeback ended with a shootout win over which side?",
 		"options": ["AC Milan", "Juventus", "Real Madrid", "Barcelona"],
 		"answer": "AC Milan",
 		"explanation": "Liverpool came back from 3–0 down to draw 3–3, then won the penalty shootout."
@@ -57,7 +57,7 @@
 		"id": 7,
 		"category": "THE RULES",
 		"difficulty": "EASY",
-		"question": "How many players does one team have on the pitch at the start of a standard match?",
+		"question": "Before kick-off, how many players per side are on the field in a standard match?",
 		"options": ["10", "11", "12", "9"],
 		"answer": "11",
 		"explanation": "A team starts with eleven players, including the goalkeeper."
@@ -66,7 +66,7 @@
 		"id": 8,
 		"category": "WORLD CUP",
 		"difficulty": "MEDIUM",
-		"question": "Which country hosted the 2010 FIFA World Cup?",
+		"question": "The first men's World Cup on African soil took place in 2010. Which country staged it?",
 		"options": ["Brazil", "Germany", "South Africa", "Mexico"],
 		"answer": "South Africa",
 		"explanation": "South Africa became the first African nation to host the men's FIFA World Cup."
@@ -75,7 +75,7 @@
 		"id": 9,
 		"category": "THE PLAYERS",
 		"difficulty": "HARD",
-		"question": "Which nation did Eusébio represent at the 1966 World Cup?",
+		"question": "Born in Mozambique, Eusébio represented which national team at the 1966 World Cup?",
 		"options": ["Brazil", "Portugal", "Mozambique", "Spain"],
 		"answer": "Portugal",
 		"explanation": "Born in Mozambique, Eusébio played internationally for Portugal and finished as the 1966 tournament's top scorer."
@@ -84,7 +84,7 @@
 		"id": 10,
 		"category": "EUROPEAN FOOTBALL",
 		"difficulty": "HARD",
-		"question": "Which club won the first edition of the European Cup in 1956?",
+		"question": "The inaugural European Cup concluded in 1956. Which club claimed the title?",
 		"options": ["Benfica", "Real Madrid", "Reims", "Barcelona"],
 		"answer": "Real Madrid",
 		"explanation": "Real Madrid won the inaugural European Cup, beating Reims 4–3 in the final."
@@ -93,8 +93,8 @@
 		"id": 11,
 		"category": "THE RULES",
 		"difficulty": "EASY",
-		"question": "How long is a standard football match, excluding stoppage time and extra time?",
-		"options": ["80 minutes", "90 minutes", "100 minutes", "Two 45-minute halves"],
+		"question": "Before added time or extra time, what is the total playing time in a standard match?",
+		"options": ["80 minutes", "90 minutes", "100 minutes", "Two 40-minute halves"],
 		"answer": "90 minutes",
 		"explanation": "A standard match has two 45-minute halves."
 	},
@@ -102,7 +102,7 @@
 		"id": 12,
 		"category": "THE RULES",
 		"difficulty": "EASY",
-		"question": "What restart is awarded when the whole ball crosses the goal line last touched by a defender, but no goal is scored?",
+		"question": "A defender last touches the ball before it fully crosses their own goal line, outside the goal. What restart follows?",
 		"options": ["Goal kick", "Corner kick", "Throw-in", "Indirect free kick"],
 		"answer": "Corner kick",
 		"explanation": "If a defender last touches the ball before it crosses their own goal line, the attacking team takes a corner."
@@ -111,7 +111,7 @@
 		"id": 13,
 		"category": "WORLD CUP",
 		"difficulty": "HARD",
-		"question": "Which African nation became the first to reach a men's FIFA World Cup quarter-final?",
+		"question": "At Italia '90, which nation became the first African side to reach a men's World Cup quarter-final?",
 		"options": ["Nigeria", "Senegal", "Cameroon", "Morocco"],
 		"answer": "Cameroon",
 		"explanation": "Cameroon reached the quarter-finals at Italia '90, the first African team to do so."
@@ -120,7 +120,7 @@
 		"id": 14,
 		"category": "EUROPEAN FOOTBALL",
 		"difficulty": "HARD",
-		"question": "Who scored the opening goal for Porto in the 2004 UEFA Champions League final?",
+		"question": "Porto's 2004 Champions League final win began with an opening goal from which player?",
 		"options": ["Deco", "Carlos Alberto", "Benni McCarthy", "Maniche"],
 		"answer": "Carlos Alberto",
 		"explanation": "Carlos Alberto opened the scoring in Porto's 3–0 victory over Monaco."
@@ -129,7 +129,7 @@
 		"id": 15,
 		"category": "THE PLAYERS",
 		"difficulty": "HARD",
-		"question": "Which goalkeeper started for Italy in the 2006 FIFA World Cup final?",
+		"question": "Who guarded Italy's goal in the 2006 World Cup final against France?",
 		"options": ["Angelo Peruzzi", "Gianluigi Buffon", "Francesco Toldo", "Dino Zoff"],
 		"answer": "Gianluigi Buffon",
 		"explanation": "Buffon was Italy's first-choice goalkeeper throughout their 2006 World Cup-winning campaign."
@@ -138,7 +138,7 @@
 		"id": 16,
 		"category": "EUROPEAN FOOTBALL",
 		"difficulty": "PROFESSIONAL",
-		"question": "Which club did Nottingham Forest defeat in the 1979 European Cup final?",
+		"question": "Trevor Francis scored the only goal in the 1979 European Cup final. Which side did Forest beat?",
 		"options": ["Hamburg", "Malmö FF", "Borussia Mönchengladbach", "Ajax"],
 		"answer": "Malmö FF",
 		"explanation": "Trevor Francis scored the only goal as Forest beat Malmö FF 1–0 in Munich."
@@ -147,7 +147,7 @@
 		"id": 17,
 		"category": "WORLD CUP",
 		"difficulty": "PROFESSIONAL",
-		"question": "Which two players shared the Golden Boot at the 1994 FIFA World Cup?",
+		"question": "At USA '94, six goals apiece left two players sharing the World Cup Golden Boot. Which pair?",
 		"options": ["Romário and Roberto Baggio", "Hristo Stoichkov and Oleg Salenko", "Bebeto and Jürgen Klinsmann", "Gabriel Batistuta and Kennet Andersson"],
 		"answer": "Hristo Stoichkov and Oleg Salenko",
 		"explanation": "Both Stoichkov and Salenko scored six goals at USA '94."
@@ -156,7 +156,7 @@
 		"id": 18,
 		"category": "EUROPEAN FOOTBALL",
 		"difficulty": "PROFESSIONAL",
-		"question": "How did the 1986 European Cup final between Steaua București and Barcelona finish?",
+		"question": "After a goalless 1986 European Cup final, what was the outcome of the Steaua București–Barcelona shootout?",
 		"options": ["Steaua won 2–0", "Barcelona won 1–0", "It ended 0–0; Steaua won on penalties", "It ended 1–1; Steaua won on penalties"],
 		"answer": "It ended 0–0; Steaua won on penalties",
 		"explanation": "Goalkeeper Helmuth Duckadam saved all four Barcelona penalties as Steaua won the shootout 2–0."
@@ -165,7 +165,7 @@
 		"id": 19,
 		"category": "THE PLAYERS",
 		"difficulty": "PROFESSIONAL",
-		"question": "Which player scored the fastest hat-trick in Premier League history?",
+		"question": "A Southampton forward set the Premier League's fastest hat-trick mark in 2015. Who was he?",
 		"options": ["Robbie Fowler", "Sadio Mané", "Sergio Agüero", "Jermain Defoe"],
 		"answer": "Sadio Mané",
 		"explanation": "Mané scored three times in 2 minutes and 56 seconds for Southampton against Aston Villa in 2015."
@@ -174,7 +174,7 @@
 		"id": 20,
 		"category": "EUROPEAN FOOTBALL",
 		"difficulty": "PROFESSIONAL",
-		"question": "Which club did Ajax defeat in the 1995 UEFA Champions League final?",
+		"question": "Patrick Kluivert scored the late winner in the 1995 final. Which side did Ajax overcome?",
 		"options": ["AC Milan", "Juventus", "Bayern Munich", "Real Madrid"],
 		"answer": "AC Milan",
 		"explanation": "Ajax beat defending champions AC Milan 1–0, with Patrick Kluivert scoring the late winner."
@@ -183,7 +183,7 @@
 		"id": 21,
 		"category": "EUROPEAN FOOTBALL",
 		"difficulty": "PROFESSIONAL",
-		"question": "Which team won the 2008–09 UEFA Champions League?",
+		"question": "At the 2009 final in Rome, which club lifted the UEFA Champions League trophy?",
 		"options": ["AC Milan", "Barcelona", "Bayern Munich", "Real Madrid"],
 		"answer": "Barcelona",
 		"explanation": "Barcelona beat Manchester United 2–0 in the final in Rome."
@@ -192,7 +192,7 @@
 		"id": 22,
 		"category": "THE PLAYERS",
 		"difficulty": "HARD",
-		"question": "Who won the Ballon d'Or in 2000?",
+		"question": "Which Portuguese midfielder received the Ballon d'Or in 2000?",
 		"options": ["Lionel Messi", "Ricardo Carvalho", "Luis Figo", "Zinedine Zidane"],
 		"answer": "Luis Figo",
 		"explanation": "Luis Figo won the 2000 award, finishing ahead of Zinedine Zidane and Andriy Shevchenko. Eusébio was the first Portuguese winner, in 1965."
@@ -201,7 +201,7 @@
 		"id": 23,
 		"category": "WORLD CUP",
 		"difficulty": "MEDIUM",
-		"question": "Which country won the 2014 FIFA World Cup?",
+		"question": "Mario Götze's extra-time strike settled the 2014 World Cup final for which nation?",
 		"options": ["Brazil", "Germany", "South Africa", "Argentina"],
 		"answer": "Germany",
 		"explanation": "Germany beat Argentina 1–0 after extra time in the final, with Mario Götze scoring the winner."
@@ -210,16 +210,16 @@
 		"id": 24,
 		"category": "THE PLAYERS",
 		"difficulty": "EASY",
-		"question": "Which of these retired players never won the UEFA Champions League?",
+		"question": "Which of these players never won the UEFA Champions League during his career?",
 		"options": ["Robert Lewandowski", "Mohamed Salah", "Zlatan Ibrahimovic", "Didier Drogba"],
 		"answer": "Zlatan Ibrahimovic",
-		"explanation": "Zlatan Ibrahimovic never won the Champions League during his playing career."
+		"explanation": "Zlatan Ibrahimović never won the Champions League during his playing career."
 	},
 	{
 		"id": 25,
 		"category": "THE RULES",
 		"difficulty": "EASY",
-		"question": "How many points does a team receive for a league win?",
+		"question": "Under the standard league points system, how many points does a side earn for a win?",
 		"options": ["One", "Two", "Three", "Four"],
 		"answer": "Three",
 		"explanation": "Under the standard league system, a win is worth three points."
@@ -228,7 +228,7 @@
 		"id": 26,
 		"category": "WORLD CUP",
 		"difficulty": "EASY",
-		"question": "Which country won the 2022 FIFA World Cup?",
+		"question": "Which national team lifted the 2022 World Cup after a 3–3 final and penalty shootout?",
 		"options": ["France", "Argentina", "Croatia", "Brazil"],
 		"answer": "Argentina",
 		"explanation": "Argentina beat France on penalties after a 3–3 final in Qatar."
@@ -237,7 +237,7 @@
 		"id": 27,
 		"category": "THE RULES",
 		"difficulty": "EASY",
-		"question": "What does a red card mean for the player who receives it?",
+		"question": "What happens to a player who is shown a red card during a match?",
 		"options": ["A warning", "A substitution", "They are sent off", "A five-minute suspension"],
 		"answer": "They are sent off",
 		"explanation": "A player shown a red card must leave the field and cannot be replaced."
@@ -246,7 +246,7 @@
 		"id": 28,
 		"category": "THE PLAYERS",
 		"difficulty": "EASY",
-		"question": "Which position is usually the only one allowed to handle the ball during open play in their own penalty area?",
+		"question": "Inside their own penalty area, which position may handle the ball during open play, subject to the Laws?",
 		"options": ["Centre-back", "Goalkeeper", "Defensive midfielder", "Striker"],
 		"answer": "Goalkeeper",
 		"explanation": "The goalkeeper may handle the ball inside their own penalty area, subject to the Laws of the Game."
@@ -255,7 +255,7 @@
 		"id": 29,
 		"category": "WORLD CUP",
 		"difficulty": "MEDIUM",
-		"question": "Which country won the 2006 FIFA World Cup?",
+		"question": "At the 2006 World Cup final in Berlin, which side won the shootout against France?",
 		"options": ["France", "Italy", "Germany", "Brazil"],
 		"answer": "Italy",
 		"explanation": "Italy defeated France on penalties in the final in Berlin."
@@ -264,7 +264,7 @@
 		"id": 30,
 		"category": "PREMIER LEAGUE",
 		"difficulty": "MEDIUM",
-		"question": "Who won the first Premier League season, in 1992–93?",
+		"question": "Which club finished top of the inaugural Premier League campaign in 1992–93?",
 		"options": ["Blackburn Rovers", "Arsenal", "Manchester United", "Aston Villa"],
 		"answer": "Manchester United",
 		"explanation": "Manchester United finished top of the inaugural Premier League season."
@@ -273,7 +273,7 @@
 		"id": 31,
 		"category": "WORLD CUP",
 		"difficulty": "MEDIUM",
-		"question": "Who scored the winning goal in the 2010 FIFA World Cup final?",
+		"question": "Who scored Spain's extra-time winner against the Netherlands in the 2010 World Cup final?",
 		"options": ["David Villa", "Andrés Iniesta", "Fernando Torres", "Xavi"],
 		"answer": "Andrés Iniesta",
 		"explanation": "Iniesta scored in extra time to give Spain a 1–0 win over the Netherlands."
@@ -282,7 +282,7 @@
 		"id": 32,
 		"category": "EUROPEAN FOOTBALL",
 		"difficulty": "MEDIUM",
-		"question": "Which country won UEFA Euro 2020, played in 2021?",
+		"question": "At the 2021 Wembley final, which nation won the tournament officially known as UEFA Euro 2020?",
 		"options": ["England", "Italy", "Spain", "Portugal"],
 		"answer": "Italy",
 		"explanation": "Italy beat England on penalties in the final at Wembley."
@@ -291,7 +291,7 @@
 		"id": 33,
 		"category": "EUROPEAN FOOTBALL",
 		"difficulty": "HARD",
-		"question": "Which club became the first English side to win the European Cup?",
+		"question": "Which club became the first team from England to lift the European Cup, in 1968?",
 		"options": ["Liverpool", "Manchester United", "Nottingham Forest", "Celtic"],
 		"answer": "Manchester United",
 		"explanation": "Manchester United won the European Cup in 1968, beating Benfica at Wembley."
@@ -300,7 +300,7 @@
 		"id": 34,
 		"category": "EUROPEAN FOOTBALL",
 		"difficulty": "HARD",
-		"question": "Which country won UEFA Euro 1992 after entering the tournament as a late replacement?",
+		"question": "A late call-up replaced Yugoslavia before Euro 1992 and went on to win. Which nation was it?",
 		"options": ["Sweden", "Denmark", "Netherlands", "Germany"],
 		"answer": "Denmark",
 		"explanation": "Denmark replaced Yugoslavia shortly before the tournament and went on to win the final."
@@ -309,7 +309,7 @@
 		"id": 35,
 		"category": "WORLD CUP",
 		"difficulty": "HARD",
-		"question": "Which country did Brazil defeat in the 2002 FIFA World Cup final?",
+		"question": "Ronaldo's brace secured Brazil's 2002 World Cup final victory. Which country finished runner-up?",
 		"options": ["Turkey", "Germany", "England", "South Korea"],
 		"answer": "Germany",
 		"explanation": "Brazil beat Germany 2–0 in Yokohama, with both goals scored by Ronaldo."
@@ -318,7 +318,7 @@
 		"id": 36,
 		"category": "WORLD CUP",
 		"difficulty": "HARD",
-		"question": "Which country hosted the 1978 FIFA World Cup?",
+		"question": "The 1978 World Cup was staged in the same country that eventually won it. Where was it held?",
 		"options": ["Chile", "Mexico", "Argentina", "Spain"],
 		"answer": "Argentina",
 		"explanation": "Argentina hosted and won the 1978 tournament, defeating the Netherlands in the final."
@@ -327,7 +327,7 @@
 		"id": 37,
 		"category": "EUROPEAN FOOTBALL",
 		"difficulty": "PROFESSIONAL",
-		"question": "Who scored Manchester United's winning goal in the 1999 UEFA Champions League final?",
+		"question": "After Sheringham's equaliser, who scored Manchester United's last-gasp winner in the 1999 final?",
 		"options": ["David Beckham", "Teddy Sheringham", "Ole Gunnar Solskjær", "Ryan Giggs"],
 		"answer": "Ole Gunnar Solskjær",
 		"explanation": "Solskjær scored in stoppage time to complete United's comeback against Bayern Munich."
@@ -336,7 +336,7 @@
 		"id": 38,
 		"category": "WORLD CUP",
 		"difficulty": "PROFESSIONAL",
-		"question": "Which player finished as the top scorer at the 1982 FIFA World Cup?",
+		"question": "Six goals at Spain '82 made which Italian forward the tournament's top scorer?",
 		"options": ["Karl-Heinz Rummenigge", "Paolo Rossi", "Zico", "Gary Lineker"],
 		"answer": "Paolo Rossi",
 		"explanation": "Rossi scored six goals for Italy, including a hat-trick against Brazil."
@@ -345,7 +345,7 @@
 		"id": 39,
 		"category": "WORLD CUP",
 		"difficulty": "PROFESSIONAL",
-		"question": "Which country did West Germany defeat in the 1974 FIFA World Cup final?",
+		"question": "Johan Cruyff's Netherlands reached the 1974 final but lost to which opponent?",
 		"options": ["Brazil", "Italy", "Netherlands", "Poland"],
 		"answer": "Netherlands",
 		"explanation": "West Germany came from behind to beat the Netherlands 2–1 in Munich."
@@ -354,9 +354,369 @@
 		"id": 40,
 		"category": "WORLD CUP",
 		"difficulty": "PROFESSIONAL",
-		"question": "Which country did Germany defeat in the 1990 FIFA World Cup final?",
+		"question": "Andreas Brehme scored the only goal in Rome in 1990. Which nation did Germany beat?",
 		"options": ["England", "Argentina", "Italy", "Netherlands"],
 		"answer": "Argentina",
 		"explanation": "Germany won 1–0 in Rome, with Andreas Brehme scoring the only goal from the penalty spot."
+	},
+	{
+		"id": 41,
+		"category": "THE RULES",
+		"difficulty": "EASY",
+		"question": "What color card does a referee show to caution a player?",
+		"options": ["Red", "Yellow", "Blue", "White"],
+		"answer": "Yellow",
+		"explanation": "A yellow card is a formal caution; a second yellow in the same match results in a red card."
+	},
+	{
+		"id": 42,
+		"category": "THE PLAYERS",
+		"difficulty": "EASY",
+		"question": "What is it called when a player scores three goals in one match?",
+		"options": ["A brace", "A hat-trick", "A clean sheet", "A treble"],
+		"answer": "A hat-trick",
+		"explanation": "A hat-trick is the term for three goals scored by one player in a match."
+	},
+	{
+		"id": 43,
+		"category": "THE RULES",
+		"difficulty": "EASY",
+		"question": "Which part of the body may an outfield player not deliberately use to play the ball?",
+		"options": ["Head", "Chest", "Foot", "Hand or arm"],
+		"answer": "Hand or arm",
+		"explanation": "Outfield players cannot deliberately handle the ball, except when taking a throw-in."
+	},
+	{
+		"id": 44,
+		"category": "THE RULES",
+		"difficulty": "EASY",
+		"question": "What restart begins each half of a football match?",
+		"options": ["A corner kick", "A goal kick", "A kick-off", "A throw-in"],
+		"answer": "A kick-off",
+		"explanation": "A kick-off starts each half and restarts play after a goal."
+	},
+	{
+		"id": 45,
+		"category": "THE RULES",
+		"difficulty": "EASY",
+		"question": "How far is the penalty spot from the goal line?",
+		"options": ["9 meters", "10 meters", "11 meters", "12 meters"],
+		"answer": "11 meters",
+		"explanation": "The penalty mark is 11 meters, or 12 yards, from the goal line."
+	},
+	{
+		"id": 46,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "EASY",
+		"question": "In which country is FC Barcelona based?",
+		"options": ["Italy", "Spain", "Portugal", "France"],
+		"answer": "Spain",
+		"explanation": "FC Barcelona is based in the city of Barcelona, in Spain."
+	},
+	{
+		"id": 47,
+		"category": "PREMIER LEAGUE",
+		"difficulty": "EASY",
+		"question": "In which city does Manchester United play its home matches?",
+		"options": ["Liverpool", "Manchester", "Birmingham", "Leeds"],
+		"answer": "Manchester",
+		"explanation": "Manchester United's home ground, Old Trafford, is in Greater Manchester."
+	},
+	{
+		"id": 48,
+		"category": "THE RULES",
+		"difficulty": "EASY",
+		"question": "What is a match with a final score of 0–0 commonly called?",
+		"options": ["A clean sheet", "A goalless draw", "A shutout win", "A dead ball"],
+		"answer": "A goalless draw",
+		"explanation": "A 0–0 result is a draw in which neither team scores."
+	},
+	{
+		"id": 49,
+		"category": "THE RULES",
+		"difficulty": "EASY",
+		"question": "What is the standard shape of a football field?",
+		"options": ["Circular", "Triangular", "Rectangular", "Oval"],
+		"answer": "Rectangular",
+		"explanation": "The Laws of the Game specify a rectangular field of play."
+	},
+	{
+		"id": 50,
+		"category": "THE RULES",
+		"difficulty": "EASY",
+		"question": "What is the name of the area where a goalkeeper may handle the ball during open play?",
+		"options": ["The six-yard box", "The center circle", "The penalty area", "The technical area"],
+		"answer": "The penalty area",
+		"explanation": "A goalkeeper may handle the ball inside their own penalty area, subject to the Laws of the Game."
+	},
+	{
+		"id": 51,
+		"category": "WORLD CUP",
+		"difficulty": "MEDIUM",
+		"question": "Which country won the 2018 FIFA World Cup?",
+		"options": ["Croatia", "France", "Belgium", "Brazil"],
+		"answer": "France",
+		"explanation": "France beat Croatia 4–2 in the final in Moscow."
+	},
+	{
+		"id": 52,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "MEDIUM",
+		"question": "Which club did Bayern Munich defeat in the 2013 UEFA Champions League final?",
+		"options": ["Barcelona", "Borussia Dortmund", "Real Madrid", "Chelsea"],
+		"answer": "Borussia Dortmund",
+		"explanation": "Bayern beat fellow German side Borussia Dortmund 2–1 at Wembley."
+	},
+	{
+		"id": 53,
+		"category": "WORLD CUP",
+		"difficulty": "MEDIUM",
+		"question": "Who scored the winning goal for Germany in the 2014 FIFA World Cup final?",
+		"options": ["Thomas Muller", "Miroslav Klose", "Mario Gotze", "Toni Kroos"],
+		"answer": "Mario Gotze",
+		"explanation": "Gotze scored in extra time to give Germany a 1–0 win over Argentina."
+	},
+	{
+		"id": 54,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "MEDIUM",
+		"question": "Which club became the first British team to win the European Cup, in 1967?",
+		"options": ["Liverpool", "Celtic", "Manchester United", "Leeds United"],
+		"answer": "Celtic",
+		"explanation": "Celtic beat Inter Milan 2–1 in Lisbon to become the first British European Cup winner."
+	},
+	{
+		"id": 55,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "MEDIUM",
+		"question": "Portugal won its first European Championship in 2016 by defeating which host nation in the final?",
+		"options": ["Spain", "France", "Croatia", "Wales"],
+		"answer": "France",
+		"explanation": "Portugal beat host nation France 1–0 after extra time in the final."
+	},
+	{
+		"id": 56,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "MEDIUM",
+		"question": "Which Italian club is widely known as the Old Lady?",
+		"options": ["AC Milan", "Roma", "Juventus", "Napoli"],
+		"answer": "Juventus",
+		"explanation": "Juventus is commonly known by the nickname La Vecchia Signora, meaning The Old Lady."
+	},
+	{
+		"id": 57,
+		"category": "PREMIER LEAGUE",
+		"difficulty": "MEDIUM",
+		"question": "Which club became the first to win four consecutive Premier League titles?",
+		"options": ["Manchester United", "Arsenal", "Liverpool", "Manchester City"],
+		"answer": "Manchester City",
+		"explanation": "Manchester City won four straight titles from the 2020–21 through 2023–24 seasons."
+	},
+	{
+		"id": 58,
+		"category": "WORLD CUP",
+		"difficulty": "MEDIUM",
+		"question": "Which country did Brazil defeat in the 1958 FIFA World Cup final?",
+		"options": ["Sweden", "West Germany", "France", "Hungary"],
+		"answer": "Sweden",
+		"explanation": "Brazil beat host nation Sweden 5–2 in the final."
+	},
+	{
+		"id": 59,
+		"category": "PREMIER LEAGUE",
+		"difficulty": "MEDIUM",
+		"question": "Who holds the Premier League record for the most career goals?",
+		"options": ["Wayne Rooney", "Harry Kane", "Alan Shearer", "Thierry Henry"],
+		"answer": "Alan Shearer",
+		"explanation": "Alan Shearer scored 260 Premier League goals."
+	},
+	{
+		"id": 60,
+		"category": "PREMIER LEAGUE",
+		"difficulty": "MEDIUM",
+		"question": "What is the name of Arsenal's home stadium in north London?",
+		"options": ["Craven Cottage", "Emirates Stadium", "Stamford Bridge", "London Stadium"],
+		"answer": "Emirates Stadium",
+		"explanation": "Arsenal have played their home matches at Emirates Stadium since 2006."
+	},
+	{
+		"id": 61,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "HARD",
+		"question": "Which club eliminated Barcelona in the 2012 UEFA Champions League semi-finals?",
+		"options": ["Chelsea", "Bayern Munich", "Inter Milan", "AC Milan"],
+		"answer": "Chelsea",
+		"explanation": "Chelsea advanced 3–2 on aggregate after winning the second leg at the Camp Nou."
+	},
+	{
+		"id": 62,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "HARD",
+		"question": "Who scored Greece's winning goal in the UEFA Euro 2004 final?",
+		"options": ["Theodoros Zagorakis", "Angelos Charisteas", "Georgios Karagounis", "Zisis Vryzas"],
+		"answer": "Angelos Charisteas",
+		"explanation": "Charisteas scored the only goal as Greece defeated Portugal 1–0."
+	},
+	{
+		"id": 63,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "HARD",
+		"question": "Which club did Porto defeat in the 2004 UEFA Champions League final?",
+		"options": ["Monaco", "Deportivo La Coruna", "Chelsea", "AC Milan"],
+		"answer": "Monaco",
+		"explanation": "Porto beat Monaco 3–0 in Gelsenkirchen to win the 2004 final."
+	},
+	{
+		"id": 64,
+		"category": "WORLD CUP",
+		"difficulty": "HARD",
+		"question": "Which country hosted the 1994 FIFA World Cup?",
+		"options": ["Mexico", "United States", "France", "Italy"],
+		"answer": "United States",
+		"explanation": "The 1994 tournament was hosted across multiple cities in the United States."
+	},
+	{
+		"id": 65,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "HARD",
+		"question": "Who scored the golden goal that won UEFA Euro 2000 for France?",
+		"options": ["Thierry Henry", "David Trezeguet", "Zinedine Zidane", "Sylvain Wiltord"],
+		"answer": "David Trezeguet",
+		"explanation": "Trezeguet scored in extra time as France beat Italy 2–1 in the final."
+	},
+	{
+		"id": 66,
+		"category": "WORLD CUP",
+		"difficulty": "HARD",
+		"question": "Who coached France to victory at the 1998 FIFA World Cup?",
+		"options": ["Didier Deschamps", "Aime Jacquet", "Roger Lemerre", "Michel Platini"],
+		"answer": "Aime Jacquet",
+		"explanation": "Aime Jacquet managed France when they won the tournament on home soil in 1998."
+	},
+	{
+		"id": 67,
+		"category": "WORLD CUP",
+		"difficulty": "HARD",
+		"question": "Which team did Cameroon defeat in extra time to reach the 1990 World Cup quarter-finals?",
+		"options": ["Colombia", "Argentina", "Romania", "Uruguay"],
+		"answer": "Colombia",
+		"explanation": "Cameroon beat Colombia 2–1 after extra time, with Roger Milla scoring twice."
+	},
+	{
+		"id": 68,
+		"category": "INTERNATIONAL FOOTBALL",
+		"difficulty": "HARD",
+		"question": "Which country won the 1999 Copa America?",
+		"options": ["Brazil", "Mexico", "Uruguay", "Argentina"],
+		"answer": "Brazil",
+		"explanation": "Brazil beat Uruguay 3–0 in the final in Asuncion, Paraguay."
+	},
+	{
+		"id": 69,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "HARD",
+		"question": "Which club won the 2004 UEFA Cup, defeating Marseille in the final?",
+		"options": ["Valencia", "Porto", "Celtic", "Sevilla"],
+		"answer": "Valencia",
+		"explanation": "Valencia beat Marseille 2–0 in Gothenburg to win the UEFA Cup."
+	},
+	{
+		"id": 70,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "HARD",
+		"question": "Which club did Porto defeat in the 2003 UEFA Cup final?",
+		"options": ["Celtic", "Lazio", "Borussia Dortmund", "Rangers"],
+		"answer": "Celtic",
+		"explanation": "Porto beat Celtic 3–2 after extra time in Seville."
+	},
+	{
+		"id": 71,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "PROFESSIONAL",
+		"question": "Which club did Porto defeat in the 1987 European Cup final?",
+		"options": ["Bayern Munich", "Ajax", "Benfica", "Steaua Bucuresti"],
+		"answer": "Bayern Munich",
+		"explanation": "Porto came from behind to beat Bayern Munich 2–1 in Vienna."
+	},
+	{
+		"id": 72,
+		"category": "WORLD CUP",
+		"difficulty": "PROFESSIONAL",
+		"question": "Which country was the first to win consecutive men's FIFA World Cups?",
+		"options": ["Brazil", "Italy", "Uruguay", "West Germany"],
+		"answer": "Italy",
+		"explanation": "Italy won the 1934 and 1938 tournaments, becoming the first nation to retain the title."
+	},
+	{
+		"id": 73,
+		"category": "WORLD CUP",
+		"difficulty": "PROFESSIONAL",
+		"question": "Which team did France defeat in the 1998 FIFA World Cup final?",
+		"options": ["Brazil", "Croatia", "Italy", "Netherlands"],
+		"answer": "Brazil",
+		"explanation": "France beat Brazil 3–0 in the final at the Stade de France."
+	},
+	{
+		"id": 74,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "PROFESSIONAL",
+		"question": "Which club did Ajax defeat in the 1972 European Cup final?",
+		"options": ["Inter Milan", "Juventus", "Bayern Munich", "Liverpool"],
+		"answer": "Inter Milan",
+		"explanation": "Ajax beat Inter Milan 2–0 in Rotterdam, with Johan Cruyff scoring both goals."
+	},
+	{
+		"id": 75,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "PROFESSIONAL",
+		"question": "Who scored Germany's golden goal in the UEFA Euro 1996 final?",
+		"options": ["Jurgen Klinsmann", "Oliver Bierhoff", "Matthias Sammer", "Stefan Kuntz"],
+		"answer": "Oliver Bierhoff",
+		"explanation": "Bierhoff scored twice, including the extra-time golden goal, in Germany's 2–1 win over Czechia."
+	},
+	{
+		"id": 76,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "PROFESSIONAL",
+		"question": "Which country won UEFA Euro 1976 after a penalty shootout against West Germany?",
+		"options": ["Czechoslovakia", "Netherlands", "Yugoslavia", "Soviet Union"],
+		"answer": "Czechoslovakia",
+		"explanation": "Czechoslovakia won the shootout 5–3, with Antonin Panenka scoring the decisive penalty."
+	},
+	{
+		"id": 77,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "PROFESSIONAL",
+		"question": "Which club did Liverpool defeat in the 1984 European Cup final?",
+		"options": ["Roma", "Juventus", "Bayern Munich", "Anderlecht"],
+		"answer": "Roma",
+		"explanation": "Liverpool and Roma drew 1–1 before Liverpool won the penalty shootout in Rome."
+	},
+	{
+		"id": 78,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "PROFESSIONAL",
+		"question": "Which club did Manchester United defeat in the 1968 European Cup final?",
+		"options": ["Benfica", "Real Madrid", "AC Milan", "Ajax"],
+		"answer": "Benfica",
+		"explanation": "Manchester United beat Benfica 4–1 after extra time at Wembley."
+	},
+	{
+		"id": 79,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "PROFESSIONAL",
+		"question": "Who managed Greece when they won UEFA Euro 2004?",
+		"options": ["Otto Rehhagel", "Fernando Santos", "Vasilios Daniil", "Dusan Bajevic"],
+		"answer": "Otto Rehhagel",
+		"explanation": "German coach Otto Rehhagel led Greece to an unexpected European Championship title."
+	},
+	{
+		"id": 80,
+		"category": "EUROPEAN FOOTBALL",
+		"difficulty": "PROFESSIONAL",
+		"question": "Who scored Real Madrid's go-ahead goal in extra time of the 2014 UEFA Champions League final?",
+		"options": ["Cristiano Ronaldo", "Gareth Bale", "Sergio Ramos", "Marcelo"],
+		"answer": "Gareth Bale",
+		"explanation": "Bale headed Real Madrid into a 2–1 lead in extra time against Atletico Madrid."
 	}
 ]

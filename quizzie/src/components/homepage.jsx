@@ -11,6 +11,17 @@ const DIFFICULTIES = [
 ]
 
 const COMPLETED_DIFFICULTIES_KEY = 'touchline-trivia-completed-difficulties'
+const QUESTION_TIME_LIMIT = 15
+const TIME_EXPIRED = 'TIME_EXPIRED'
+
+function shuffle(items) {
+    const shuffled = [...items]
+    for (let index = shuffled.length - 1; index > 0; index -= 1) {
+        const randomIndex = Math.floor(Math.random() * (index + 1))
+        ;[shuffled[index], shuffled[randomIndex]] = [shuffled[randomIndex], shuffled[index]]
+    }
+    return shuffled
+}
 
 function readCompletedDifficulties() {
     try {
@@ -59,7 +70,9 @@ function LeaderboardTable({ entries, loading = false, error = '' }) {
 function Home() {
     const [isPlaying, setIsPlaying] = useState(false)
     const [activeDifficulty, setActiveDifficulty] = useState('EASY')
+    const [quizQuestions, setQuizQuestions] = useState([])
     const [questionIndex, setQuestionIndex] = useState(0)
+    const [secondsRemaining, setSecondsRemaining] = useState(QUESTION_TIME_LIMIT)
     const [selectedAnswer, setSelectedAnswer] = useState(null)
     const [score, setScore] = useState(0)
     const [isFinished, setIsFinished] = useState(false)
@@ -95,14 +108,28 @@ function Home() {
         }
     }, [])
 
-    const questions = allQuestions.filter((question) => question.difficulty === activeDifficulty)
+    useEffect(() => {
+        if (!isPlaying || isFinished || selectedAnswer !== null) return
+        if (secondsRemaining === 0) {
+            setSelectedAnswer(TIME_EXPIRED)
+            return
+        }
+
+        const timer = window.setTimeout(() => setSecondsRemaining((remaining) => remaining - 1), 1000)
+        return () => window.clearTimeout(timer)
+    }, [isPlaying, isFinished, selectedAnswer, secondsRemaining])
+
+    const questions = quizQuestions.length ? quizQuestions : allQuestions.filter((question) => question.difficulty === activeDifficulty)
     const currentQuestion = questions[questionIndex]
     const progress = questions.length ? ((questionIndex + (selectedAnswer === null ? 0 : 1)) / questions.length) * 100 : 0
 
     const startQuiz = (difficulty) => {
         if (completedDifficulties.includes(difficulty)) return
+        const questionsForDifficulty = allQuestions.filter((question) => question.difficulty === difficulty)
+        setQuizQuestions(shuffle(questionsForDifficulty.map((question) => ({ ...question, options: shuffle(question.options) }))))
         setActiveDifficulty(difficulty)
         setQuestionIndex(0)
+        setSecondsRemaining(QUESTION_TIME_LIMIT)
         setSelectedAnswer(null)
         setScore(0)
         setIsFinished(false)
@@ -122,6 +149,7 @@ function Home() {
             return
         }
         setQuestionIndex((currentIndex) => currentIndex + 1)
+        setSecondsRemaining(QUESTION_TIME_LIMIT)
         setSelectedAnswer(null)
     }
 
@@ -221,6 +249,11 @@ function Home() {
                             <div className="progress-track" role="progressbar" aria-label="Quiz progress" aria-valuenow={Math.round(progress)} aria-valuemin="0" aria-valuemax="100">
                                 <span style={{ width: `${progress}%` }} />
                             </div>
+                            <div className={`question-timer${secondsRemaining <= 5 ? ' is-urgent' : ''}`} role="timer" aria-label={`${secondsRemaining} seconds remaining`}>
+                                <span>TIME LEFT</span>
+                                <div className="question-timer-track"><span style={{ width: `${(secondsRemaining / QUESTION_TIME_LIMIT) * 100}%` }} /></div>
+                                <strong>{secondsRemaining}s</strong>
+                            </div>
                             <h1>{currentQuestion.question}</h1>
                             <div className="answer-list">
                                 {currentQuestion.options.map((option, index) => {
@@ -238,7 +271,7 @@ function Home() {
                             </div>
                             {selectedAnswer !== null && (
                                 <div className="answer-feedback">
-                                    <p><strong>{selectedAnswer === currentQuestion.answer ? 'That’s right.' : 'Not quite.'}</strong> {currentQuestion.explanation}</p>
+                                    <p><strong>{selectedAnswer === TIME_EXPIRED ? 'Time’s up.' : selectedAnswer === currentQuestion.answer ? 'That’s right.' : 'Not quite.'}</strong> {currentQuestion.explanation}</p>
                                     <button className="button button-primary" onClick={moveToNextQuestion}>
                                         {questionIndex === questions.length - 1 ? 'See results' : 'Next question'} <ArrowIcon />
                                     </button>
@@ -256,7 +289,7 @@ function Home() {
                             <p className="hero-description">Big moments. Cult heroes. The details only real fans remember. Step up to the spot and prove you know your football.</p>
                             <div className="hero-actions">
                                 <a className="button button-primary" href="#difficulty">Choose your level <ArrowIcon /></a>
-                                <span className="time-note"><span>◷</span> 10 questions · about 3 minutes</span>
+                                <span className="time-note"><span>◷</span> 20 questions · about 6 minutes</span>
                             </div>
                             <div className="hero-proof">
                                 <div className="avatar-stack" aria-hidden="true"><span>⚽</span><span>🏆</span><span>⚡</span></div>
@@ -271,14 +304,14 @@ function Home() {
                                 <div className="football">⚽</div>
                                 <div className="floating-card"><span className="floating-label">THE DAILY CHALLENGE</span><strong>One question<br />at a time.</strong><span className="floating-arrow"><ArrowIcon /></span></div>
                             </div>
-                            <div className="visual-bottomline"><span>01 — 10</span><span>READY WHEN YOU ARE <b>↗</b></span></div>
+                            <div className="visual-bottomline"><span>01 — 20</span><span>READY WHEN YOU ARE <b>↗</b></span></div>
                         </div>
                     </section>
 
                     <section className="ticker" aria-label="Quiz topics"><div className="ticker-track"><span>THE PREMIER LEAGUE</span><i>✳</i><span>WORLD CUP HISTORY</span><i>✳</i><span>LEGENDARY PLAYERS</span><i>✳</i><span>ICONIC MOMENTS</span><i>✳</i><span>THE PREMIER LEAGUE</span><i>✳</i><span>WORLD CUP HISTORY</span><i>✳</i></div></section>
 
                     <section className="difficulty-section" id="difficulty">
-                        <div className="section-intro"><div><span className="eyebrow">PICK YOUR CHALLENGE</span><h2>Four levels.<br /><span>One beautiful game.</span></h2></div><p>Each round has ten questions. You get one scored attempt per level; your name can compete across all four.</p></div>
+                        <div className="section-intro"><div><span className="eyebrow">PICK YOUR CHALLENGE</span><h2>Four levels.<br /><span>One beautiful game.</span></h2></div><p>Each round has twenty questions. You get one scored attempt per level; your name can compete across all four.</p></div>
                         <div className="difficulty-grid">
                             {DIFFICULTIES.map((difficulty, index) => {
                                 const count = allQuestions.filter((question) => question.difficulty === difficulty.name.toUpperCase()).length
@@ -322,7 +355,7 @@ function Home() {
 
                     <section className="how-section" id="how-to-play">
                         <div><span className="eyebrow">SIMPLE AS THAT</span><h2>Three steps.<br /><span>One winner.</span></h2></div>
-                        <div className="steps-list"><div className="step"><span>01</span><p><strong>Pick your level.</strong> Choose Easy, Medium, Hard, or Professional.</p></div><div className="step"><span>02</span><p><strong>Trust your football brain.</strong> Answer ten hand-picked questions. No lifelines, no VAR.</p></div><div className="step"><span>03</span><p><strong>Claim your place.</strong> Save one score per level and see how you rank. Play other levels with the same name.</p></div></div>
+                        <div className="steps-list"><div className="step"><span>01</span><p><strong>Pick your level.</strong> Choose Easy, Medium, Hard, or Professional.</p></div><div className="step"><span>02</span><p><strong>Trust your football brain.</strong> Answer twenty hand-picked questions. No lifelines, no VAR.</p></div><div className="step"><span>03</span><p><strong>Claim your place.</strong> Save one score per level and see how you rank. Play other levels with the same name.</p></div></div>
                     </section>
                     <footer className="footer"><a className="brand" href="#home"><span className="brand-mark">T<span>.</span></span><span className="brand-name">TOUCHLINE<span>TRIVIA</span></span></a><p>Made for the love of the game. <span>© 2026 TOUCHLINE TRIVIA</span></p><button className="back-top" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>BACK TO TOP ↑</button></footer>
                 </>
