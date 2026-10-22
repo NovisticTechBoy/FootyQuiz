@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import allQuestions from '../data_component/data.json'
 import { supabase } from '../lib/supabaseClient.js'
+import ReleaseNotes, { RELEASE_NOTES_VERSION } from '../notes.jsx/release_notes.jsx'
 
 const DIFFICULTIES = [
     { name: 'Easy', tone: 'easy', description: 'The basics every football fan knows.' },
@@ -11,8 +12,18 @@ const DIFFICULTIES = [
 ]
 
 const COMPLETED_DIFFICULTIES_KEY = 'touchline-trivia-completed-difficulties'
+const RELEASE_NOTES_READ_KEY = 'touchline-trivia-release-notes-read'
 const QUESTION_TIME_LIMIT = 15
 const TIME_EXPIRED = 'TIME_EXPIRED'
+
+function hasReadCurrentReleaseNotes() {
+    try {
+        return window.localStorage.getItem(RELEASE_NOTES_READ_KEY) === RELEASE_NOTES_VERSION
+    } catch (error) {
+        console.error('Could not read release notes status from local storage.', error)
+        return false
+    }
+}
 
 function shuffle(items) {
     const shuffled = [...items]
@@ -85,6 +96,8 @@ function Home() {
     const [isSavingScore, setIsSavingScore] = useState(false)
     const [scoreError, setScoreError] = useState('')
     const [completedDifficulties, setCompletedDifficulties] = useState(readCompletedDifficulties)
+    const [hasUnreadReleaseNotes, setHasUnreadReleaseNotes] = useState(() => !hasReadCurrentReleaseNotes())
+    const [isReleaseNotesOpen, setIsReleaseNotesOpen] = useState(false)
 
     useEffect(() => {
         let isCurrent = true
@@ -196,6 +209,16 @@ function Home() {
 
     const selectedLeaderboard = leaderboards[leaderboardDifficulty] || []
 
+    const openReleaseNotes = () => {
+        setIsReleaseNotesOpen(true)
+        setHasUnreadReleaseNotes(false)
+        try {
+            window.localStorage.setItem(RELEASE_NOTES_READ_KEY, RELEASE_NOTES_VERSION)
+        } catch (error) {
+            console.error('Could not save release notes status to local storage.', error)
+        }
+    }
+
     return (
         <main className="site-shell">
             <header className="topbar">
@@ -207,9 +230,15 @@ function Home() {
                     <a href="#categories">The quiz</a>
                     <a href="#leaderboards">Leaderboard</a>
                     <a href="#how-to-play">How to play</a>
+                    <button className={`release-notes-trigger${hasUnreadReleaseNotes ? ' has-unread' : ''}`} type="button" onClick={openReleaseNotes} aria-haspopup="dialog" aria-label={hasUnreadReleaseNotes ? 'What’s New? Unread updates' : 'What’s New?'}>
+                        What’s New?
+                        {hasUnreadReleaseNotes && <span className="release-notes-unread" aria-hidden="true" />}
+                    </button>
                 </nav>
                 <a className="nav-cta" href="#difficulty">Choose a level <ArrowIcon /></a>
             </header>
+
+            {isReleaseNotesOpen && <ReleaseNotes onClose={() => setIsReleaseNotesOpen(false)} />}
 
             {isPlaying ? (
                 <section className="quiz-screen" id="play" aria-live="polite">
